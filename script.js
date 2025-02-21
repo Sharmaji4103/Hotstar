@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index < 0) index = totalSlides - 1;
 
         let newTransformValue = -index * 100 + "%";
-        slider.style.transition = "transform 0.8s ease-in-out"; // Smoother transition
+        slider.style.transition = "transform 0.8s ease-in-out"; // Smooth transition
         slider.style.transform = `translateX(${newTransformValue})`;
     }
 
@@ -28,5 +28,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // Assigning Functions to Buttons
     document.querySelector(".next-btn").addEventListener("click", nextSlide);
     document.querySelector(".prev-btn").addEventListener("click", prevSlide);
-});
 
+    // 👉 **Touch Swipe Support for Mobile**
+    let startX = 0;
+    let endX = 0;
+
+    slider.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchend", (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        let swipeThreshold = 50; // Minimum swipe distance
+        let swipeDistance = startX - endX;
+
+        if (swipeDistance > swipeThreshold) {
+            nextSlide(); // Swipe Left → Next Slide
+        } else if (swipeDistance < -swipeThreshold) {
+            prevSlide(); // Swipe Right → Previous Slide
+        }
+    }
+});
