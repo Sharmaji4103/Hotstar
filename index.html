@@ -11,22 +11,20 @@
         <div class="logo">
             <img src="images/logo2.jpg" alt="Hotstar Logo">
         </div>
-    
         <button class="subscribe-btn">Subscribe</button>
     </header>
+
     <!-- Movie Slider -->
     <section class="slider-container">
-        <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
         <div class="slider">
             <div class="slides">
-                <div class="slide"><img src="images/movie1.jpg" alt="Movie 1"></div>
-                <div class="slide"><img src="images/movie2.jpg" alt="Movie 2"></div>
-                <div class="slide"><img src="images/movie3.jpg" alt="Movie 3"></div>
-                <div class="slide"><img src="images/movie4.jpg" alt="Movie 4"></div>
-                <div class="slide"><img src="images/movie5.jpg" alt="Movie 5"></div>
+                <div class="slide"><img src="images/movie1.jpg" alt="Movie 1" onclick="playVideo('videos/video1.mp4')"></div>
+                <div class="slide"><img src="images/movie2.jpg" alt="Movie 2" onclick="playVideo('videos/movie2.mp4')"></div>
+                <div class="slide"><img src="images/movie3.jpg" alt="Movie 3" onclick="playVideo('videos/movie3.mp4')"></div>
+                <div class="slide"><img src="images/movie4.jpg" alt="Movie 4" onclick="playVideo('videos/movie4.mp4')"></div>
+                <div class="slide"><img src="images/movie5.jpg" alt="Movie 5" onclick="playVideo('videos/movie5.mp4')"></div>
             </div>
         </div>
-        <button class="next-btn" onclick="nextSlide()">&#10095;</button>
     </section>
 
     <!-- Movie Sections -->
@@ -34,37 +32,37 @@
         <h2>Action Movies</h2>
         <div class="movie-slider-container">
             <div class="movie-slider" id="action">
-                <div class="movie"><img src="images/movie6.jpg" alt="Action Movie 1"></div>
-                <div class="movie"><img src="images/movie7.jpg" alt="Action Movie 2"></div>
-                <div class="movie"><img src="images/movie8.jpg" alt="Action Movie 3"></div>
-                <div class="movie"><img src="images/movie9.jpg" alt="Action Movie 4"></div>
-                <div class="movie"><img src="images/movie10.jpg" alt="Action Movie 5"></div>
+                <div class="movie"><img src="images/movie6.jpg" alt="Action Movie 1" onclick="playVideo('videos/movie6.mp4')"></div>
+                <div class="movie"><img src="images/movie7.jpg" alt="Action Movie 2" onclick="playVideo('videos/movie7.mp4')"></div>
+                <div class="movie"><img src="images/movie8.jpg" alt="Action Movie 3" onclick="playVideo('videos/movie8.mp4')"></div>
+                <div class="movie"><img src="images/movie9.jpg" alt="Action Movie 4" onclick="playVideo('videos/movie9.mp4')"></div>
+                <div class="movie"><img src="images/movie10.jpg" alt="Action Movie 5" onclick="playVideo('videos/movie10.mp4')"></div>
             </div>
         </div>
     </section>
-    
+
     <section class="movie-section">
         <h2>Drama Movies</h2>
         <div class="movie-slider-container">
             <div class="movie-slider" id="drama">
-                <div class="movie"><img src="images/movie11.jpg" alt="Drama Movie 1"></div>
-                <div class="movie"><img src="images/movie12.jpg" alt="Drama Movie 2"></div>
-                <div class="movie"><img src="images/movie13.jpg" alt="Drama Movie 3"></div>
-                <div class="movie"><img src="images/movie14.jpg" alt="Drama Movie 4"></div>
-                <div class="movie"><img src="images/movie15.jpg" alt="Drama Movie 5"></div>
+                <div class="movie"><img src="images/movie11.jpg" alt="Drama Movie 1" onclick="playVideo('videos/movie11.mp4')"></div>
+                <div class="movie"><img src="images/movie12.jpg" alt="Drama Movie 2" onclick="playVideo('videos/movie12.mp4')"></div>
+                <div class="movie"><img src="images/movie13.jpg" alt="Drama Movie 3" onclick="playVideo('videos/movie13.mp4')"></div>
+                <div class="movie"><img src="images/movie14.jpg" alt="Drama Movie 4" onclick="playVideo('videos/movie14.mp4')"></div>
+                <div class="movie"><img src="images/movie15.jpg" alt="Drama Movie 5" onclick="playVideo('videos/movie15.mp4')"></div>
             </div>
         </div>
     </section>
-    
+
     <section class="movie-section">
         <h2>Kids Movies</h2>
         <div class="movie-slider-container">
             <div class="movie-slider" id="kids">
-                <div class="movie"><img src="images/movie16.jpg" alt="Kids Movie 1"></div>
-                <div class="movie"><img src="images/movie17.jpg" alt="Kids Movie 2"></div>
-                <div class="movie"><img src="images/movie18.jpg" alt="Kids Movie 3"></div>
-                <div class="movie"><img src="images/movie19.jpg" alt="Kids Movie 4"></div>
-                <div class="movie"><img src="images/movie20.jpg" alt="Kids Movie 5"></div>
+                <div class="movie"><img src="images/movie16.jpg" alt="Kids Movie 1" onclick="playVideo('videos/movie16.mp4')"></div>
+                <div class="movie"><img src="images/movie17.jpg" alt="Kids Movie 2" onclick="playVideo('videos/movie17.mp4')"></div>
+                <div class="movie"><img src="images/movie18.jpg" alt="Kids Movie 3" onclick="playVideo('videos/movie18.mp4')"></div>
+                <div class="movie"><img src="images/movie19.jpg" alt="Kids Movie 4" onclick="playVideo('videos/movie19.mp4')"></div>
+                <div class="movie"><img src="images/movie20.jpg" alt="Kids Movie 5" onclick="playVideo('videos/movie20.mp4')"></div>
             </div>
         </div>
     </section>
@@ -90,6 +88,5 @@
     </nav>
 
     <script src="script.js"></script>
-
 </body>
 </html>
