@@ -1,3 +1,4 @@
+/* Reset & Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,9 @@ body {
     color: white;
 }
 
-/* Navbar */
+/* =========================== */
+/* ? NAVIGATION BAR (TOP) ? */
+/* =========================== */
 header {
     display: flex;
     justify-content: space-between;
@@ -47,16 +50,24 @@ nav ul li a {
     cursor: pointer;
     color: white;
     font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-/* Movie Slider */
+.subscribe-btn:hover {
+    background: #0088dd;
+}
+
+/* =========================== */
+/* ? MOVIE SLIDER ? */
+/* =========================== */
 .slider-container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: 20px auto;
-    width: 80%;
+    width: 90%;
     overflow: hidden;
 }
 
@@ -102,9 +113,11 @@ nav ul li a {
 .prev-btn { left: 10px; }
 .next-btn { right: 10px; }
 
-/* Movie Sections */
+/* =========================== */
+/* ? MOVIE SECTIONS ? */
+/* =========================== */
 .movie-section {
-    width: 80%;
+    width: 90%;
     margin: 30px auto;
     text-align: center;
 }
@@ -121,11 +134,13 @@ nav ul li a {
     transition: transform 0.5s ease-in-out;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    white-space: nowrap;
 }
 
 .movie {
     flex: 0 0 70%;
     scroll-snap-align: center;
+    margin: 10px;
 }
 
 .movie img {
@@ -139,11 +154,43 @@ nav ul li a {
     transform: scale(1.1);
 }
 
-/* ========================== */
-/* 📌 MOBILE VIEW CSS */
-/* ========================== */
+/* =========================== */
+/* ? FIXED BOTTOM NAVIGATION ? */
+/* =========================== */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bottom-nav .nav-item {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    flex: 1;
+}
+
+.bottom-nav .nav-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.bottom-nav .nav-item:hover {
+    opacity: 0.7;
+}
+
+/* =========================== */
+/* ? RESPONSIVE DESIGN ? */
+/* =========================== */
 @media (max-width: 768px) {
-    /* ✅ Keep Navbar in Row Layout */
+    /* ? Keep Navbar in Row Layout */
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -166,7 +213,7 @@ nav ul li a {
         height: 50px;
     }
 
-    /* ✅ Adjust Movie Slider */
+    /* ? Adjust Movie Slider */
     .slider-container {
         width: 95%;
     }
@@ -175,7 +222,7 @@ nav ul li a {
         max-height: 300px;
     }
 
-    /* ✅ Fix Movie Sections */
+    /* ? Fix Movie Sections */
     .movie-section {
         width: 95%;
     }
@@ -195,7 +242,7 @@ nav ul li a {
         max-width: 150px;
     }
 
-    /* ✅ Reduce Button Sizes */
+    /* ? Reduce Button Sizes */
     .prev-btn, .next-btn, .slider-btn {
         padding: 10px;
         font-size: 16px;
