@@ -1,65 +1,223 @@
-/* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
-    /* Navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: white;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #101010;
+}
+
+.logo img {
+    width: 100px;
+    height: 60px;
+    filter: brightness(0.8);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background: #00aaff;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+/* Movie Slider */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 80%;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: 0.5s;
+    text-align: center; /* Centers images */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: black;
+}
+
+/* Slider Buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+/* Movie Sections */
+.movie-section {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.movie-slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.movie {
+    min-width: 200px;
+    margin: 10px;
+}
+
+.movie img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.movie img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.left-btn { left: 10px; }
+.right-btn { right: 10px; }
+
+/* ========================== */
+/* 📌 MOBILE VIEW CSS */
+/* ========================== */
+@media (max-width: 768px) {
+    /* Adjust Navbar */
     header {
         flex-direction: column;
         align-items: center;
         padding: 10px 20px;
-        text-align: center;
     }
 
     nav ul {
         flex-direction: column;
+        text-align: center;
         padding: 10px 0;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 10px 0;
     }
 
-    .subscribe-btn {
-        width: 100%;
-        margin-top: 10px;
+    .logo img {
+        width: 80px;
+        height: 50px;
     }
 
-    /* Slider */
+    /* Adjust Slider */
     .slider-container {
         width: 95%;
     }
 
     .slide img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+        max-height: 300px;
     }
 
-    /* Movie Sections */
+    /* Adjust Movie Sections */
     .movie-section {
         width: 95%;
     }
 
-    .movie-slider-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .movie-slider {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
     }
 
     .movie {
-        width: 45%;
-        margin: 5px;
+        flex: 0 0 70%;
+        scroll-snap-align: center;
     }
 
     .movie img {
-        width: 100%;
-        height: auto;
+        max-width: 150px;
     }
 
-    /* Hide Arrows on Mobile */
+    /* Reduce Button Sizes */
     .prev-btn, .next-btn, .slider-btn {
-        display: none;
+        padding: 10px;
+        font-size: 16px;
     }
 }
