@@ -72,6 +72,7 @@ nav ul li a {
 }
 
 .slider {
+    display: flex;
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
@@ -79,21 +80,23 @@ nav ul li a {
 
 .slides {
     display: flex;
+    width: 500%; /* Ensure all slides are in one row */
     transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    min-width: 100%;
+    flex: 0 0 100%;
     text-align: center;
 }
 
 .slide img {
-    width: 100%;
+    width: 100%;  /* Ensure the image takes the full width of the slide */
     max-height: 500px;
-    object-fit: contain;
+    object-fit: contain; /* Prevents image cropping */
     border-radius: 10px;
-    background-color: black;
+    background-color: black; /* Helps with aspect ratio */
 }
+
 
 /* Slider Buttons */
 .prev-btn, .next-btn {
