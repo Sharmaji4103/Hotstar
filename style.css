@@ -1,0 +1,126 @@
+.* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plan {
+    background: linear-gradient(to right, #001f3f, #003366);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ads-free {
+    background-color: #ffcc00;
+    color: black;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.features {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.features span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.price-options {
+    display: flex;
+    gap: 10px;
+}
+
+.option {
+    background-color: #1c1c1c;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.option.selected {
+    border: 2px solid white;
+}
+
+.option h2 {
+    font-size: 18px;
+}
+
+.premium {
+    background: #222;
+}
+
+.price-start {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.subscription-info {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+.continue-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-plans {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
