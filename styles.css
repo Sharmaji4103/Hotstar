@@ -267,19 +267,36 @@ nav ul li a {
     }
 
     .movie-slider {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-    }
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    gap: 0; /* Ensure no extra space */
+    justify-content: start; /* Align images to start */
+}
 
-    .movie {
-        flex: 0 0 70%;
-        scroll-snap-align: center;
-    }
+.movie-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
 
-    .movie img {
-        max-width: 150px;
-    }
+.movie {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin: 0;
+    padding: 0;
+}
+
+.movie img {
+    width: 100%;
+    max-width: 120px; /* Adjust size as needed */
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
 
     /* ? Reduce Button Sizes */
     .prev-btn, .next-btn, .slider-btn {
