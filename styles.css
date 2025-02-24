@@ -120,9 +120,10 @@ nav ul li a {
 /* ? MOVIE SECTIONS ? */
 /* =========================== */
 .movie-section {
-    width: 90%;
-    margin: 30px auto;
+    width: 100%;
+    margin: 20px auto;
     text-align: center;
+    overflow: hidden;
 }
 
 .movie-slider-container {
@@ -130,33 +131,58 @@ nav ul li a {
     align-items: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .movie-slider {
     display: flex;
-    gap: 0; /* Removes any unwanted spacing between movie images */
+    gap: 0; /* Remove extra spacing */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     white-space: nowrap;
+    scrollbar-width: none; /* Hide scrollbar for cleaner look */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+.movie-slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
 }
 
 .movie {
     flex: 0 0 auto;
     scroll-snap-align: start;
-    margin: 0; /* Remove margins */
-    padding: 0; /* Remove padding */
-}
-
-.movie img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 5px;
     margin: 0;
     padding: 0;
 }
 
-.movie img:hover {
-    transform: scale(1.1);
+.movie img {
+    width: 100%;
+    max-width: 100px; /* Adjust for mobile */
+    border-radius: 0; /* No border-radius for seamless effect */
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Ensure the images are touching each other */
+@media (max-width: 768px) {
+    .movie-slider {
+        display: flex;
+        gap: 0;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        white-space: nowrap;
+    }
+
+    .movie {
+        flex: 0 0 auto;
+    }
+
+    .movie img {
+        width: 100px; /* Adjust for mobile view */
+        max-width: 100px;
+        border-radius: 0;
+    }
 }
 
 /* =========================== */
